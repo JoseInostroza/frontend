@@ -8,6 +8,7 @@ const FormularioCotizacion = () => {
         telefono: '',
         producto: '',
         cantidad: '',
+        rut:'',
         observaciones: ''
     });
 
@@ -27,6 +28,7 @@ const FormularioCotizacion = () => {
         // Validaciones
         const newErrors = {};
         if (!formData.nombre) newErrors.nombre = 'El nombre es obligatorio';
+        if (!formData.rut) newErrors.rut = 'El rut es obligatorio';
         if (!formData.email) newErrors.email = 'El correo electrónico es obligatorio';
         if (!formData.telefono) newErrors.telefono = 'El teléfono es obligatorio';
         if (!formData.producto) newErrors.producto = 'Debes seleccionar un servicio/producto';
@@ -47,6 +49,7 @@ const FormularioCotizacion = () => {
                 telefono: '',
                 producto: '',
                 cantidad: '',
+                rut: '',
                 precio: '',
                 observaciones: ''
             });
@@ -78,12 +81,12 @@ const FormularioCotizacion = () => {
                 <label className="block text-sm font-medium mb-1">Rut del cliente:</label>
                 <input
                     type="text"
-                    name="Rut"
+                    name="rut"
                     value={formData.rut}
                     onChange={handleChange}
                     className="w-full p-2 border rounded"
                 />
-                {errors.Rut && <p className="text-red-500 text-sm">{errors.Rut}</p>}
+                {errors.Rut && <p className="text-red-500 text-sm">{errors.rut}</p>}
             </div>
 
             {/* Campo: Correo electrónico */}
