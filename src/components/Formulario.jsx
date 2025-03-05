@@ -72,6 +72,19 @@ const FormularioCotizacion = () => {
                 />
                 {errors.nombre && <p className="text-red-500 text-sm">{errors.nombre}</p>}
             </div>
+            
+            {/* Campo: Rut */}
+            <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Rut del cliente:</label>
+                <input
+                    type="text"
+                    name="Rut"
+                    value={formData.rut}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded"
+                />
+                {errors.Rut && <p className="text-red-500 text-sm">{errors.Rut}</p>}
+            </div>
 
             {/* Campo: Correo electrónico */}
             <div className="mb-4">
@@ -109,13 +122,13 @@ const FormularioCotizacion = () => {
                     className="w-full p-2 border rounded"
                 >
                     <option value="">Selecciona un producto</option>
-                    <option value="land vip 1">land vip 1</option>
-                    <option value="land vip 2">land vip 2</option>
-                    <option value="land 1">land 1</option>
-                    <option value="land 2">land 2</option>
-                    <option value="land 3">land 3</option>
-                    <option value="land 4">land 4</option>
-                    <option value="land 5">land 5</option>
+                    <option value="land vip 1">LAND VIP 1</option>
+                    <option value="land vip 2">LAND VIP 2</option>
+                    <option value="land 1">LAND 1</option>
+                    <option value="land 2">LAND 2</option>
+                    <option value="land 3">LAND 3</option>
+                    <option value="land 4">LAND 4</option>
+                    <option value="land 5">LAND 5</option>
                 </select>
                 {errors.producto && <p className="text-red-500 text-sm">{errors.producto}</p>}
             </div>
