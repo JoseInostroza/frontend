@@ -112,9 +112,9 @@ const FormularioCotizacion = () => {
                 {errors.telefono && <p className="text-red-500 text-sm">{errors.telefono}</p>}
             </div>
 
-            {/* Campo: Servicio/Producto (menú desplegable) */}
+            {/* Campo: Producto (menú desplegable) */}
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Servicio/Producto:</label>
+                <label className="block text-sm font-medium mb-1">Producto:</label>
                 <select
                     name="producto"
                     value={formData.producto}
@@ -148,7 +148,7 @@ const FormularioCotizacion = () => {
 
             {/* Campo: Precio unitario */}
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Precio unitario:</label>
+                <label className="block text-sm font-medium mb-1">Precio unitario UF:</label>
                 <input
                     type="number"
                     name="precio"
