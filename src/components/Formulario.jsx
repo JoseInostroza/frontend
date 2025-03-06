@@ -33,7 +33,6 @@ const FormularioCotizacion = () => {
         if (!formData.telefono) newErrors.telefono = 'El teléfono es obligatorio';
         if (!formData.producto) newErrors.producto = 'Debes seleccionar un servicio/producto';
         if (!formData.cantidad) newErrors.cantidad = 'La cantidad es obligatoria';
-        if (!formData.precio) newErrors.precio = 'El precio es obligatorio';
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
@@ -50,7 +49,6 @@ const FormularioCotizacion = () => {
                 producto: '',
                 cantidad: '',
                 rut: '',
-                precio: '',
                 observaciones: ''
             });
         } catch (error) {
@@ -147,19 +145,6 @@ const FormularioCotizacion = () => {
                     className="w-full p-2 border rounded"
                 />
                 {errors.cantidad && <p className="text-red-500 text-sm">{errors.cantidad}</p>}
-            </div>
-
-            {/* Campo: Precio unitario */}
-            <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Precio unitario UF:</label>
-                <input
-                    type="number"
-                    name="precio"
-                    value={formData.precio}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded"
-                />
-                {errors.precio && <p className="text-red-500 text-sm">{errors.precio}</p>}
             </div>
 
             {/* Campo: Observaciones */}
