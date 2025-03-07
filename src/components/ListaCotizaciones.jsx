@@ -28,7 +28,7 @@ const ListaCotizaciones = () => {
                     <li key={cotizacion.id} className="mb-4 p-4 border rounded">
                         <p><strong>ID:</strong> {cotizacion.id}</p>
                         <p><strong>Cliente:</strong> {cotizacion.nombre}</p>
-                        <p><strong>Total:</strong> ${cotizacion.valorListaUf}</p>
+                        <p><strong>Total UF:</strong> ${cotizacion.valorFinalUf}</p>
                         <p><strong>Fecha:</strong> {new Date(cotizacion.fecha).toLocaleString()}</p>
                         <button
                             onClick={() => descargarPDF(cotizacion.id)}
