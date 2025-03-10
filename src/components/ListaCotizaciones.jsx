@@ -7,7 +7,7 @@ const ListaCotizaciones = () => {
     useEffect(() => {
         const fetchCotizaciones = async () => {
             try {
-                const response = await axios.get('http://localhost:3500/cotizaciones');
+                const response = await axios.get('http://localhost:3500/api/cotizaciones');
                 setCotizaciones(response.data);
             } catch (error) {
                 console.error('Error obteniendo cotizaciones:', error);
@@ -17,7 +17,7 @@ const ListaCotizaciones = () => {
     }, []);
 
     const descargarPDF = (id) => {
-        window.open(`http://localhost:3500/generar-pdf/${id}`, '_blank');
+        window.open(`http://localhost:3500/api/generar-pdf/${id}`, '_blank');
     };
 
     return (

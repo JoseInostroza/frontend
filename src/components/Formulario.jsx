@@ -40,7 +40,7 @@ const FormularioCotizacion = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3500/generar', formData);
+            const response = await axios.post('http://localhost:3500/api/generar', formData);
             alert(`Cotización generada con ID: ${response.data.id}`);
             setFormData({
                 nombre: '',
@@ -123,13 +123,13 @@ const FormularioCotizacion = () => {
                     className="w-full p-2 border rounded"
                 >
                     <option value="">Selecciona un producto</option>
-                    <option value="land vip 1">LAND VIP 1</option>
-                    <option value="land vip 2">LAND VIP 2</option>
-                    <option value="land 1">LAND 1</option>
-                    <option value="land 2">LAND 2</option>
-                    <option value="land 3">LAND 3</option>
-                    <option value="land 4">LAND 4</option>
-                    <option value="land 5">LAND 5</option>
+                    <option value="LAND VIP 1">LAND VIP 1</option>
+                    <option value="LAND VIP 2">LAND VIP 2</option>
+                    <option value="LAND 1">LAND 1</option>
+                    <option value="LAND 2">LAND 2</option>
+                    <option value="LAND 3">LAND 3</option>
+                    <option value="LAND 4">LAND 4</option>
+                    <option value="LAND 5">LAND 5</option>
                 </select>
                 {errors.producto && <p className="text-red-500 text-sm">{errors.producto}</p>}
             </div>
